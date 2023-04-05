@@ -209,7 +209,7 @@ def unmount_iso(auth_data: dict) -> None:
         return
     else:
         raise
-        
+
 def main(args: argparse.ArgumentParser, auth_data: dict) -> None:
     if args.token != "":
         auth_data["auth_token"] = args.token
@@ -260,7 +260,7 @@ if __name__ == "__main__":
     arg_parser.add_argument("--token", type=str, help="Auth Token")
     arg_parser.add_argument("--tenantid", type=str, help="Tenant ID")
     arg_parser.add_argument("--username", type=str, help="Username")
-    arg_parser.add_argument("--password", type=str, help="Password")    
+    arg_parser.add_argument("--password", type=str, help="Password")
     arg_parser.add_argument("--customisourl", type=str, help="Custom ISO URL")
     args = arg_parser.parse_args()
     main(args, auth_data)
